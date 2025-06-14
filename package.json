@@ -6,7 +6,7 @@
     "build": "tsc"
   },
   "name": "json-to-table-mui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -43,5 +43,10 @@
     "filter",
     "responsive-table",
     "json-to-table-mui"
-  ]
+  ],
+  "author": {
+    "name": "Jose Semidey",
+    "email": "jfsemideys@gmail.com, jfsemideys@hotmail.com",
+    "url": "https://www.linkedin.com/in/jose-semidey-5b53387, https://jfsemideys.github.io/jose-semidey-site/#/"
+  }
 }
