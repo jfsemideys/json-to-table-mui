@@ -66,7 +66,7 @@ export default function App() {
 ## 🛠 Dev Setup
 
 ```bash
-git clone https://github.com/yourusername/json-to-table-mui
+git clone https://github.com/jfsemideys/json-to-table-mui
 cd json-to-table-mui
 npm install
 npm run dev     # Starts Vite demo in /example
