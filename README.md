@@ -35,32 +35,55 @@ yarn add json-to-table-mui
 ## 📦 Usage
 
 ```tsx
-import React from "react";
-import JsonToTable from "json-to-table-mui";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import JsonToTable from '../../../NPM Projects/json-to-table-mui/src/JsonToTable';
 
-const data = [
-  { name: "Alice", age: 25, country: "USA" },
-  { name: "Bob", age: 30, country: "Canada" },
+const sampleData = [
+  { name: 'Alice', age: 25, country: 'USA' },
+  { name: 'Bob', age: 30, country: 'Canada' },
+  { name: 'Charlie', age: 22, country: 'UK' },
+  { name: 'David', age: 28, country: 'Germany' },
+  { name: 'Eva', age: 35, country: 'France' },
+  { name: 'Frank', age: 27, country: 'Italy' },
+  { name: 'Grace', age: 31, country: 'Spain' },
+  { name: 'Helen', age: 26, country: 'Australia' },
 ];
 
-export default function App() {
-  return (
-    <div>
-      <h1>My Table</h1>
-      <JsonToTable data={data} />
-    </div>
-  );
-}
+const App = () => {
+
+  const onRowClicked = (row: any) => {
+      console.log("row", row);
+  }
+  return(<>
+  <div style={{ padding: 20 }}>
+    <h1>json-to-table-mui Demo</h1>
+    <JsonToTable
+      data={sampleData}
+      onFirstValueClick={(row:any) => onRowClicked(row)}
+    />
+  </div>
+  </>
+  )
+};
+
+export default App;
+
+const root = ReactDOM.createRoot(document.getElementById('root')!);
+root.render(<App />);
+
 ```
 
 ---
 
 ## 📐 Props
 
-| Prop   | Type    | Description                      |
-| ------ | ------- | -------------------------------- |
-| `data` | `any[]` | Array of JSON objects to display |
-
+| Prop                | Type                 | Description                       |
+| ------------------- | -------------------- | --------------------------------  |
+| `data`              | `any[]`              | Array of JSON objects to display  |
+| ------------------- | -------------------- | --------------------------------- |
+| `onFirstValueClick` | `(row: any) => void` | Called when the first JSON field  |
+|                     |                      | value of a row is clicked
 ---
 
 ## 🛠 Dev Setup

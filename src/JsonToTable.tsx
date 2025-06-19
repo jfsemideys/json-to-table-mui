@@ -14,9 +14,10 @@ import {
 
 interface JsonToTableProps {
   data: any[];
+  onFirstValueClick?: (row: any) => void;
 }
 
-const JsonToTable: React.FC<JsonToTableProps> = ({ data }) => {
+const JsonToTable: React.FC<JsonToTableProps> = ({ data, onFirstValueClick }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [orderBy, setOrderBy] = useState('');
@@ -82,8 +83,27 @@ const JsonToTable: React.FC<JsonToTableProps> = ({ data }) => {
           <TableBody>
             {paginatedData.map((row, index) => (
               <TableRow key={index}>
-                {columns.map((col) => (
-                  <TableCell key={col}>{row[col]}</TableCell>
+                {columns.map((col, index) => (
+                    index === 0
+                    ? <TableCell 
+                        key={col}
+                        sx={{
+                             cursor: 'pointer', 
+                             textDecoration: 'underline'
+                        }} 
+                        onClick={() => onFirstValueClick(row)}
+                        >
+                            {row[col]}
+                      </TableCell>
+                    : <TableCell 
+                        key={col}
+                        sx={{
+                          cursor: 'none', 
+                          textDecoration: 'none'
+                      }} 
+                        >
+                            {row[col]}
+                      </TableCell>
                 ))}
               </TableRow>
             ))}
