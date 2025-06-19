@@ -1,28 +1,14 @@
 {
   "main": "dist/JsonToTable.js",
   "types": "dist/JsonToTable.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc"
   },
   "name": "json-to-table-mui",
-  "version": "1.1.0",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^7.1.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "typescript": "^5.8.3"
-  },
+  "version": "1.2.0",
   "keywords": [
     "react",
     "material-ui",
@@ -48,5 +34,19 @@
     "name": "Jose Semidey",
     "email": "jfsemideys@gmail.com, jfsemideys@hotmail.com",
     "url": "https://www.linkedin.com/in/jose-semidey-5b53387, https://jfsemideys.github.io/jose-semidey-site/#/"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "typescript": "^5.8.3"
   }
 }
