@@ -37,7 +37,7 @@ yarn add json-to-table-mui
 ```tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import JsonToTable from '../../../NPM Projects/json-to-table-mui/src/JsonToTable';
+import  JsonToTable from  "json-to-table-mui";
 
 const sampleData = [
   { name: 'Alice', age: 25, country: 'USA' },
